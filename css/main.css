@@ -130,7 +130,7 @@ html {
 }
 @media screen and (min-width: 1000px) {
   .body {
-    background: url("../img/tablet/image-host-tablet.jpg") right top/50% 53em no-repeat, hsl(224deg, 35%, 11%);
+    background: url("../img/tablet/image-host-tablet.jpg") right top/53% 51em no-repeat, hsl(224deg, 35%, 11%);
     justify-content: space-between;
     padding-bottom: 0em;
   }
@@ -151,17 +151,20 @@ html {
   .body-main-text {
     text-align: left;
     gap: 2.5em;
+    order: 1;
   }
   .body-main-text-desc {
     width: 75%;
   }
   .body-main-brand {
     width: 90%;
+    order: 3;
   }
   .body-main-input {
     width: 75%;
     align-items: flex-start;
     position: relative;
+    order: 2;
   }
   .body-main-input-mail {
     padding: 1.7em 2em;
@@ -185,7 +188,7 @@ html {
 }
 @media screen and (min-width: 1200px) {
   .body {
-    background-size: 46% 48em;
+    background-size: 46% 53em;
   }
   .body-main {
     width: 65%;

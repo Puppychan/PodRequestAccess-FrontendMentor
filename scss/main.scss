@@ -79,7 +79,7 @@ html {
 } 
 @include mi.min-width(1000px) {
     .body {
-        background: url("../img/tablet/image-host-tablet.jpg") right top / 50% 53em no-repeat, var.$black;
+        background: url("../img/tablet/image-host-tablet.jpg") right top / 53% 51em no-repeat, var.$black;
         // justify-content: flex-start;
         // gap: 15em;
         justify-content: space-between;
@@ -104,14 +104,17 @@ html {
                 &-desc {
                     width: 75%;
                 }
+                order: 1;
             }
             &-brand {
                 width: 90%;
+                order: 3;
             }
             &-input {
                 width: 75%;
                 align-items: flex-start;
                 position: relative;
+                order: 2;
                 &-mail {
                     padding: 1.7em 2em;
                     font-size: var.$step--5;
@@ -137,7 +140,7 @@ html {
 }
 @include mi.min-width(1200px) {
     .body {
-        background-size: 46% 48em;
+        background-size: 46% 53em;
         &-main {
             width: 65%;
         }
