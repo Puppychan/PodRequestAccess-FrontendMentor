@@ -1,0 +1,73 @@
+@use "variables.scss" as var;
+
+@mixin min-width($width) {
+    @media screen and (min-width: $width){
+        @content;
+    }
+}
+@mixin max-width($width) {
+    @media screen and (max-width: $width){
+        @content;
+    }
+}
+@mixin flex($gap: 0) {
+    display: flex;
+    flex-direction: row;
+    gap: $gap;
+}
+@mixin flex-col($gap: 0) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+@mixin flex-center($gap: 0) {
+    @include flex($gap);
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-col-center($gap: 0) {
+    @include flex-col($gap);
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-btw {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flex-start($gap) {
+    @include flex($gap);
+    justify-content: flex-start;
+    align-items: center;
+}
+
+// text
+@mixin text-style($color, $font-size, $font-weight: 300, $line-height: 1.5) {
+    color: $color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+// button
+@mixin button-style($color, $background-color, $type : "button") {
+    border-radius: 40px;
+    border: none;
+    padding: 1.6em 2.7em;
+    @if $type == "input" {
+        &:-ms-input-placeholder {
+            color: $color;
+        }
+        &::placeholder {
+            color: $color;
+            opacity: 1;
+        }
+        &::-ms-input-placeholder {
+            color: $color;
+        }
+    }
+    @include text-style($color, var.$step--4, 700, 1);
+    background-color: $background-color;
+
+}
