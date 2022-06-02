@@ -55,6 +55,7 @@
     border-radius: 40px;
     border: none;
     padding: 1.6em 2.7em;
+    // for placeholder
     @if $type == "input" {
         &:-ms-input-placeholder {
             color: $color;
@@ -67,6 +68,13 @@
             color: $color;
         }
     }
+    @else {
+        &:hover {
+            filter: contrast(1.75);
+            cursor: pointer;
+        }
+
+    } 
     @include text-style($color, var.$step--4, 700, 1);
     background-color: $background-color;
 

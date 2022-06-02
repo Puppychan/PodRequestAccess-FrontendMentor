@@ -119,6 +119,10 @@ html {
   word-spacing: 2px;
   background-color: hsl(157deg, 74%, 62%);
 }
+.body-main-input-submit:hover {
+  filter: contrast(1.75);
+  cursor: pointer;
+}
 .body-footer {
   display: none;
 }
