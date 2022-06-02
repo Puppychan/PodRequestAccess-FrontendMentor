@@ -22,7 +22,7 @@ html {
         @include mi.flex-center;
         width: 100%;
         & img {
-            height: 5em;
+            height: 4em;
         }
     }
     &-main {
@@ -61,6 +61,9 @@ html {
         }
 
     }
+    &-footer {
+        display: none;
+    }
 
 }
 @include mi.max-width(460px) {
@@ -76,12 +79,22 @@ html {
 } 
 @include mi.min-width(1000px) {
     .body {
+        background: url("../img/tablet/image-host-tablet.jpg") right top / 50% 53em no-repeat, var.$black;
+        // justify-content: flex-start;
+        // gap: 15em;
+        justify-content: space-between;
+        padding-bottom: 0em;
         &-header {
             justify-content: flex-start;
+            & img {
+                height: 5em;
+            }
         }
         &-main {
+            align-self: flex-start;
             align-items: flex-start;
-            width: 60%;
+            
+            width: 79%;
             padding: 7em 2.5em;
             background-color: var.$black;
             gap: 2.5em;
@@ -96,20 +109,53 @@ html {
                 width: 90%;
             }
             &-input {
+                width: 75%;
                 align-items: flex-start;
+                position: relative;
                 &-mail {
-                    width: 80%;
-                    padding: 1em 2em;
+                    padding: 1.7em 2em;
+                    font-size: var.$step--5;
                 }
                 &-submit {
-                    width: 45%;
-                    padding: 0.9em 1.7em;
-
+                    width: 35%;
+                    padding: 1.3em 0.4em;
+                    position: absolute;
+                    right: 1.5%;
+                    font-size: var.$step--5;
                 }
+            }
+        }
+        &-footer {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            & img {
+                width: 35%;
             }
         }
     }
 }
+@include mi.min-width(1200px) {
+    .body {
+        background-size: 46% 48em;
+        &-main {
+            width: 65%;
+        }
+    }
+}
 @include mi.min-width(1440px) {
-
+    .body {
+        background: url("../img/desktop/image-host.jpg") right center / 66% 60em no-repeat, var.$black;
+        padding: 5em 10em;
+        &-main {
+            width: 75%;
+        }
+        &-footer {         
+            justify-content: flex-end;
+            & img {
+                transform: translateX(10em);
+                width: 25%;
+            }
+        }
+    }
 }
